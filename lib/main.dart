@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:product_catalog_app/feature/auth/presentation/auth_screen.dart';
+import 'package:product_catalog_app/feature/auth/presentation/provider/auth_provider.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   runApp(const MyApp());
@@ -7,15 +10,22 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Product Catalog',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (context) => AuthProvider(),
+        )
+      ],
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Product Catalog',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: const AuthScreen(),
       ),
-      home: null,
     );
   }
 }
