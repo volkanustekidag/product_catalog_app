@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:product_catalog_app/feature/auth/presentation/utils/validations.dart';
+import 'package:product_catalog_app/feature/auth/presentation/widgets/remember_me_check_box.dart';
 import 'package:product_catalog_app/feature/auth/presentation/widgets/textfieldform.dart';
 
 class Login extends StatelessWidget {
@@ -21,6 +22,7 @@ class Login extends StatelessWidget {
             label: "Password",
             validation: Validations().validationPassword,
           ),
+          RememberMeCheckBox()
         ],
       ),
     );
