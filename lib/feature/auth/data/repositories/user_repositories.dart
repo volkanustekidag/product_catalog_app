@@ -30,7 +30,7 @@ class UserRepository {
         content: Text("ERROR!"),
       ));
     } else {
-      Navigator.push(
+      Navigator.pushReplacement(
         context!,
         MaterialPageRoute(
           builder: (context) => const HomeScreen(),
