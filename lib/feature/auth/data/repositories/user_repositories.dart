@@ -61,7 +61,7 @@ class UserRepository {
         await saveToken(user.token);
       }
 
-      Navigator.push(
+      Navigator.pushReplacement(
         context!,
         MaterialPageRoute(
           builder: (context) => const HomeScreen(),
