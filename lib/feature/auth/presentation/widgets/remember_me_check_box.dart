@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:product_catalog_app/feature/auth/presentation/provider/new_provider.dart';
+import 'package:product_catalog_app/feature/auth/presentation/provider/check_box_provider.dart';
 import 'package:provider/provider.dart';
 
 class RememberMeCheckBox extends StatelessWidget {
@@ -9,8 +9,6 @@ class RememberMeCheckBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print(context.widget.toString());
-
     return Row(
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
