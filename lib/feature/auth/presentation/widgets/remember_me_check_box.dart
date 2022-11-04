@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:product_catalog_app/feature/auth/presentation/provider/auth_provider.dart';
+import 'package:product_catalog_app/feature/auth/presentation/provider/new_provider.dart';
 import 'package:provider/provider.dart';
 
 class RememberMeCheckBox extends StatelessWidget {
@@ -9,16 +9,18 @@ class RememberMeCheckBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print(context.widget.toString());
+
     return Row(
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
         const Text("Remember me "),
         Checkbox(
-          value: context.watch<AuthProvider>().rememberMe,
-          onChanged: (value) {
-            context.read<AuthProvider>().rememberMeBox();
-          },
-        ),
+            value: Provider.of<CheckBoxProvider>(context).rememberMe,
+            onChanged: (value) {
+              Provider.of<CheckBoxProvider>(context, listen: false)
+                  .rememberMeBox();
+            })
       ],
     );
   }
