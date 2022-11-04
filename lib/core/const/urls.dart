@@ -6,4 +6,9 @@ class Urls {
 
   static const PRODUCT_ALL =
       "https://assignment-api.piton.com.tr/api/v1/product/all";
+
+  static const PRODUCT_LIKE =
+      "https://assignment-api.piton.com.tr/api/v1/product/like";
+  static const PRODUCT_UNLIKE =
+      "https://assignment-api.piton.com.tr/api/v1/product/unlike";
 }
