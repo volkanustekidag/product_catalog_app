@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:product_catalog_app/core/data/repositories/product_repositories.dart';
-import 'package:product_catalog_app/domain/models/product.dart';
+import 'package:product_catalog_app/feature/home/data/repositories/product_repositories.dart';
+import 'package:product_catalog_app/feature/home/domain/models/product.dart';
 
 class ProductProvider extends ChangeNotifier {
   Products? products;

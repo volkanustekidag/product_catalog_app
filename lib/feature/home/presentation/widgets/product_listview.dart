@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:product_catalog_app/core/widgets/favorite_icon.dart';
 import 'package:product_catalog_app/core/widgets/product_image.dart';
-import 'package:product_catalog_app/domain/models/product.dart';
+import 'package:product_catalog_app/feature/home/domain/models/product.dart';
 import 'package:product_catalog_app/feature/product_detail/product_detail_screen.dart';
 
 class ProductListview extends StatelessWidget {

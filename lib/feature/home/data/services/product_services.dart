@@ -2,8 +2,8 @@ import 'dart:convert';
 import 'dart:io';
 
 import "package:http/http.dart" as http;
-import 'package:product_catalog_app/core/data/dto/all_product_model.dart';
-import 'package:product_catalog_app/core/data/dto/favorite_model.dart';
+import 'package:product_catalog_app/feature/home/data/dto/all_product_model.dart';
+import 'package:product_catalog_app/feature/home/data/dto/favorite_model.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class ProductServices {

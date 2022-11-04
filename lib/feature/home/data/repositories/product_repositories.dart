@@ -1,6 +1,6 @@
 import 'package:product_catalog_app/core/const/urls.dart';
-import 'package:product_catalog_app/core/data/services/product_services.dart';
-import 'package:product_catalog_app/domain/models/product.dart';
+import 'package:product_catalog_app/feature/home/data/services/product_services.dart';
+import 'package:product_catalog_app/feature/home/domain/models/product.dart';
 
 class ProductRepositories {
   final ProductServices _productServices = ProductServices();

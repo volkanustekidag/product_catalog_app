@@ -1,4 +1,4 @@
-import 'package:product_catalog_app/domain/models/product.dart';
+import 'package:product_catalog_app/feature/home/domain/models/product.dart';
 
 class AllProductModel {
   String? reason;
