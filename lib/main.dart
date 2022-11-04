@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:product_catalog_app/feature/auth/presentation/auth_screen.dart';
+import 'package:product_catalog_app/core/widgets/auth_init.dart';
 import 'package:product_catalog_app/feature/auth/presentation/provider/auth_provider.dart';
 import 'package:product_catalog_app/feature/auth/presentation/provider/check_box_provider.dart';
-import 'package:product_catalog_app/feature/home/presentation/home_screen.dart';
+import 'package:product_catalog_app/feature/home/presentation/provider/product_provider.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -30,6 +30,9 @@ class MyApp extends StatelessWidget {
         ),
         ChangeNotifierProvider(
           create: (context) => CheckBoxProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (context) => ProductProvider(),
         )
       ],
       child: MaterialApp(
@@ -38,7 +41,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: token != null ? const HomeScreen() : const AuthScreen(),
+        home: AuthInit(token: token),
       ),
     );
   }
