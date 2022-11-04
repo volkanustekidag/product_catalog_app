@@ -1,4 +1,4 @@
-import 'package:product_catalog_app/feature/auth/presentation/domain/entity/user.dart';
+import 'package:product_catalog_app/feature/auth/domain/entity/user.dart';
 
 class UserModel {
   String? token;

@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import "package:http/http.dart" as http;
-import 'package:product_catalog_app/feature/auth/presentation/data/dto/user_model.dart';
+import 'package:product_catalog_app/feature/auth/data/dto/user_model.dart';
 
 class UserServicesRemote {
   Future<dynamic> post(Map<String, dynamic> body, url) async {

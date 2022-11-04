@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
-import 'package:product_catalog_app/feature/auth/presentation/data/repositories/user_repositories.dart';
+import 'package:product_catalog_app/feature/auth/data/repositories/user_repositories.dart';
 import 'package:product_catalog_app/feature/auth/presentation/utils/validations.dart';
 import 'package:product_catalog_app/feature/auth/presentation/widgets/auth_button.dart';
 import 'package:product_catalog_app/feature/auth/presentation/widgets/textfieldform.dart';

@@ -2,9 +2,9 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:product_catalog_app/core/const/urls.dart';
-import 'package:product_catalog_app/feature/auth/presentation/data/services/local/user_service_local.dart';
-import 'package:product_catalog_app/feature/auth/presentation/data/services/remote/user_services_remote.dart';
-import 'package:product_catalog_app/feature/auth/presentation/domain/entity/user.dart';
+import 'package:product_catalog_app/feature/auth/data/services/local/user_service_local.dart';
+import 'package:product_catalog_app/feature/auth/data/services/remote/user_services_remote.dart';
+import 'package:product_catalog_app/feature/auth/domain/entity/user.dart';
 import 'package:product_catalog_app/feature/home/presentation/home_screen.dart';
 
 class UserRepository {

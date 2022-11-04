@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:product_catalog_app/feature/auth/presentation/data/repositories/user_repositories.dart';
+import 'package:product_catalog_app/feature/auth/data/repositories/user_repositories.dart';
 import 'package:product_catalog_app/feature/auth/presentation/provider/check_box_provider.dart';
 import 'package:product_catalog_app/feature/auth/presentation/utils/validations.dart';
 import 'package:product_catalog_app/feature/auth/presentation/widgets/auth_button.dart';
