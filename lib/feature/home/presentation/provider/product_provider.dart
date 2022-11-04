@@ -7,26 +7,18 @@ class ProductProvider extends ChangeNotifier {
 
   getAllProduct() async {
     products = await ProductRepositories().getAllProduct();
-    print("provider ");
     notifyListeners();
   }
 
-  unlikeProduct(id) {
+  unlikeProduct(id) async {
     products?.favCount?.remove(id);
-    print(id);
+    await ProductRepositories().unlikeProduct(id.toString());
     notifyListeners();
   }
 
-  likeProduct(id) {
+  likeProduct(id) async {
     products?.favCount?.add(id);
-
-    for (var element in products!.favCount!) {
-      print(element);
-    }
-    print("********************");
+    await ProductRepositories().likeProduct(id.toString());
     notifyListeners();
-    for (var element in products!.favCount!) {
-      print(element);
-    }
   }
 }
