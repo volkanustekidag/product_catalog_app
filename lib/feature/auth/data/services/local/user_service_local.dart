@@ -4,6 +4,5 @@ class UserServiceLocal {
   Future saveToken(token) async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setString("token", token);
-    print("a---------------${prefs.getString("token")}");
   }
 }

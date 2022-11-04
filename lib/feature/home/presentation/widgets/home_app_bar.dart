@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:product_catalog_app/feature/auth/presentation/auth_screen.dart';
 import 'package:product_catalog_app/feature/home/presentation/provider/product_provider.dart';
 import 'package:product_catalog_app/feature/product_fav_list/product_fav_list.dart';
 import 'package:provider/provider.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class HomeAppBar extends StatelessWidget with PreferredSizeWidget {
   const HomeAppBar({
@@ -13,7 +15,6 @@ class HomeAppBar extends StatelessWidget with PreferredSizeWidget {
     var products = context.watch<ProductProvider>().products;
 
     return AppBar(
-      centerTitle: true,
       title: const Text(
         "PRODUCTS",
       ),
@@ -66,7 +67,19 @@ class HomeAppBar extends StatelessWidget with PreferredSizeWidget {
               ),
             ),
           ),
-        )
+        ),
+        IconButton(
+            onPressed: () async {
+              Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const AuthScreen(),
+                  ));
+
+              final prefs = await SharedPreferences.getInstance();
+              await prefs.remove("token");
+            },
+            icon: const Icon(Icons.exit_to_app)),
       ],
     );
   }
