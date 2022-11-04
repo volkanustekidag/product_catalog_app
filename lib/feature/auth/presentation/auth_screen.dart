@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:product_catalog_app/feature/auth/presentation/widgets/auth_button.dart';
 import 'package:product_catalog_app/feature/auth/presentation/widgets/auth_type.dart';
 import 'package:product_catalog_app/feature/auth/presentation/widgets/toggle_buttons.dart';
 
@@ -21,7 +20,6 @@ class _AuthScreenState extends State<AuthScreen> {
               children: const [
                 ToggleButtonsGroup(),
                 AuthTypeWidget(),
-                AuthButton(),
               ],
             ),
           ),

@@ -9,7 +9,5 @@ class AuthTypeWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) =>
-      context.watch<AuthProvider>().toggleIndex == 0
-          ? const Login()
-          : const Register();
+      context.watch<AuthProvider>().toggleIndex == 0 ? Login() : Register();
 }
