@@ -7,7 +7,18 @@ class ProductRepositories {
 
   Future<Products?> getAllProduct() async {
     Products products = await _productServices.get(Urls.PRODUCT_ALL);
-
     return products;
+  }
+
+  Future likeProduct(id) async {
+    Map<String, dynamic> likeBody = {"productId": id};
+    await _productServices.post(likeBody, Urls.PRODUCT_LIKE);
+  }
+
+  Future unlikeProduct(id) async {
+    Map<String, dynamic> likeBody = {"productId": id};
+    var a = await _productServices.post(likeBody, Urls.PRODUCT_UNLIKE);
+
+    print(a);
   }
 }
